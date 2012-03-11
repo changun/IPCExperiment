@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:weightSum="1">
+<TextView android:id="@+id/textView1" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Workload Settings"></TextView>
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/linearLayout1" android:layout_weight="0.03">
+</LinearLayout>
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/LinearLayout01">
+    <TextView android:id="@+id/TextView02" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_height="wrap_content" android:text="Period(ms)" android:layout_width="fill_parent" android:layout_weight="2"></TextView>
+    <EditText android:layout_weight="1" android:inputType="number" android:layout_height="wrap_content" android:layout_width="fill_parent" android:id="@+id/Period_Text"></EditText>
+</LinearLayout>
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/LinearLayout02">
+    <TextView android:layout_weight="2" android:id="@+id/TextView01" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Size(byte)"></TextView>
+    <EditText android:layout_weight="1" android:inputType="number" android:layout_width="fill_parent" android:layout_height="wrap_content" android:id="@+id/Size_Text"></EditText>
+</LinearLayout>
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/LinearLayout03">
+    <TextView android:layout_weight="2" android:id="@+id/TextView03" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Times"></TextView>
+    <EditText android:layout_weight="1" android:inputType="number" android:layout_width="fill_parent" android:layout_height="wrap_content" android:id="@+id/Times_Text"></EditText>
+</LinearLayout>
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/linearLayout3" android:layout_weight="0.63">
+    <TextView android:text="Sample\nRate(ms)" android:layout_weight="2" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_width="fill_parent"></TextView>
+    <EditText android:inputType="number" android:layout_weight="1" android:layout_height="wrap_content" android:layout_width="fill_parent" android:id="@+id/SampleRate_Text">
+        <requestFocus></requestFocus>
+    </EditText>
+</LinearLayout>
+<TextView android:id="@+id/TextView04" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="IPC Mechanisms"></TextView>
+<Button android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Start Service" android:id="@+id/StartService_Button"></Button>
+<Button android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Remote Function(AIDL)" android:id="@+id/RemoteFunction_Button"></Button>
+<Button android:layout_width="match_parent" android:id="@+id/ContentProvider_Button" android:text="Content Provider" android:layout_height="wrap_content"></Button>
+<Button android:layout_width="match_parent" android:id="@+id/RunStackJobs_Button" android:text="Run Stack Jobs" android:layout_height="wrap_content"></Button>
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/LinearLayout1"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+    <TextView android:id="@+id/textView1" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" android:layout_marginTop="147dp" android:text=""></TextView>
+    <TextView android:id="@+id/Setting_TextView" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="Setting" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" android:layout_marginTop="34dp"></TextView>
+    <Button android:id="@+id/WarmUp_Button" android:text="Warm Up" android:layout_height="wrap_content" android:layout_width="wrap_content" android:width="200px" android:layout_below="@+id/Setting_TextView" android:layout_centerHorizontal="true" android:layout_marginTop="40dp"></Button>
+    <Button android:text="Start Test" android:layout_height="wrap_content" android:layout_width="wrap_content" android:width="200px" android:layout_alignTop="@+id/textView1" android:layout_alignLeft="@+id/WarmUp_Button" android:layout_marginTop="18dp" android:id="@+id/Start_Button"></Button>
+    <Button android:text="Close Test" android:layout_height="wrap_content" android:layout_width="wrap_content" android:width="200px" android:layout_below="@+id/Start_Button" android:layout_alignLeft="@+id/Start_Button" android:layout_marginTop="23dp" android:id="@+id/Close_Button"></Button>
+    <TextView android:id="@+id/Result_TestView" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="Result" android:layout_below="@+id/Close_Button" android:layout_centerHorizontal="true" android:layout_marginTop="44dp"></TextView>
+    
+</RelativeLayout>

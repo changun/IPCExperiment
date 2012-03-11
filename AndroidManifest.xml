@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="edu.ucla.cens.ipc"
+      android:versionCode="1"
+      android:versionName="1.0">
+    <uses-sdk android:minSdkVersion="8" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="android.permission.BROADCAST_STICKY" />
+	<uses-permission android:name="android.permission.READ_LOGS" />
+    <application android:icon="@drawable/icon" android:label="@string/app_name">
+        <activity android:name=".IPCExperiementActivity"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+       <service android:name=".JobDispatcher">
+            <intent-filter>
+            </intent-filter>
+        </service>
+        <service android:name=".StartServiceSender" android:process="edu.ucla.cens.ipc.sender">
+            <intent-filter>
+            </intent-filter>
+        </service>
+        <service android:name=".StartServiceReceiver" android:process="edu.ucla.cens.ipc.receiver.startService"/>
+        
+        
+        
+        <service android:name=".RemoteFunctionSender" android:process="edu.ucla.cens.ipc.sender">
+            <intent-filter>
+            </intent-filter>
+        </service>
+        <service android:name=".MemoryShareSender" android:process="edu.ucla.cens.ipc.sender">
+            <intent-filter>
+            </intent-filter>
+        </service>
+                <service android:name=".MultipleRemoteFunctionSender" android:process="edu.ucla.cens.ipc.sender">
+            <intent-filter>
+            </intent-filter>
+        </service>
+        <service android:name=".MemoryShareReceiver" android:process="edu.ucla.cens.ipc.receiver.memoryShare">
+            <intent-filter>
+            	<action android:name="edu.ucla.cens.ipc.IMemoryShare" />
+            </intent-filter>
+        </service>
+        <service android:name=".RemoteFunctionReceiver" android:process="edu.ucla.cens.ipc.receiver.remoteFunction">
+            <intent-filter>
+            	<action android:name="edu.ucla.cens.ipc.IRemoteService" />
+            </intent-filter>
+
+        </service>
+        <service android:name=".RemoteFunctionReceiver_1" android:process="edu.ucla.cens.ipc.receiver.remoteFunction_1">
+            <intent-filter>
+            	<action android:name="edu.ucla.cens.ipc.IRemoteService" />
+            </intent-filter>
+
+        </service>
+        <service android:name=".RemoteFunctionReceiver_2" android:process="edu.ucla.cens.ipc.receiver.remoteFunction_2">
+            <intent-filter>
+            	<action android:name="edu.ucla.cens.ipc.IRemoteService" />
+            </intent-filter>
+
+        </service>
+        <service android:name=".RemoteFunctionReceiver_3" android:process="edu.ucla.cens.ipc.receiver.remoteFunction_3">
+            <intent-filter>
+            	<action android:name="edu.ucla.cens.ipc.IRemoteService" />
+            </intent-filter>
+
+        </service>
+        
+        <service android:name=".ContentProviderSender" android:process="edu.ucla.cens.ipc.sender" >
+            <intent-filter>
+            </intent-filter>
+        </service>
+                <service android:name=".MultipleContentProviderSender" android:process="edu.ucla.cens.ipc.sender" >
+            <intent-filter>
+            </intent-filter>
+        </service>
+        <provider android:name=".ContentProviderReceiver"  android:process="edu.ucla.cens.ipc.receiver.contentProvider" android:authorities="edu.ucla.cens.ipc.ContentProvider" />
+        <provider android:name=".ContentProviderReceiver_1"  android:process="edu.ucla.cens.ipc.receiver.contentProvider_1" android:authorities="edu.ucla.cens.ipc.ContentProvider_1" />
+        <provider android:name=".ContentProviderReceiver_2"  android:process="edu.ucla.cens.ipc.receiver.contentProvider_2" android:authorities="edu.ucla.cens.ipc.ContentProvider_2" />
+        <provider android:name=".ContentProviderReceiver_3"  android:process="edu.ucla.cens.ipc.receiver.contentProvider_3" android:authorities="edu.ucla.cens.ipc.ContentProvider_3" />
+
+        <service android:name=".BroadcastSender" android:process="edu.ucla.cens.ipc.sender">
+            <intent-filter>
+            </intent-filter>
+        </service>
+        <service android:name=".BroadcastReceiver" android:process="edu.ucla.cens.ipc.receiver.broadcast"/>
+        <service android:name=".BroadcastReceiver_1" android:process="edu.ucla.cens.ipc.receiver.broadcast_1"/>
+        <service android:name=".BroadcastReceiver_2" android:process="edu.ucla.cens.ipc.receiver.broadcast_2"/>
+        <service android:name=".BroadcastReceiver_3" android:process="edu.ucla.cens.ipc.receiver.broadcast_3"/>
+
+        <service android:name=".ProfileService" android:process="edu.ucla.cens.ipc.profile">
+        	            <intent-filter>
+            	<action android:name="edu.ucla.cens.ipc.IProfileService" />
+            	 </intent-filter>
+
+        </service>
+
+    </application>
+</manifest>
